@@ -1,25 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useReducer } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import About from "./components/About";
+import Chat from "./components/Chat";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import ProtectedRoute from "./ProtectedRoute";
+import { initialState, reducer } from "./Reducer";
+import { ActionTypes, IAction, IGlobalContext, IGlobalState } from "./Types";
+
+export const GlobalContext = React.createContext<IGlobalContext>({
+  dispatch: (action: IAction) => {},
+  state: initialState,
+});
 
 function App() {
+  const [state, dispatch] = useReducer<any>(reducer, initialState);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalContext.Provider
+      value={{
+        dispatch: dispatch,
+        state: state as IGlobalState,
+      }}
+    >
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <ProtectedRoute path="/chat/:id">
+            <Chat />
+          </ProtectedRoute>
+        </Switch>
+        <Footer />
+      </BrowserRouter>
+    </GlobalContext.Provider>
   );
 }
 

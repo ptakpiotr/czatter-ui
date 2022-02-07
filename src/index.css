@@ -1,13 +1,78 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: whitesmoke;
+  background-color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(20, 38, 58);
+}
+
+a {
+  text-decoration: none;
+  color: yellowgreen;
+}
+a:hover {
+  color: green;
+}
+
+.spec {
+  text-decoration: none;
+  color: yellowgreen;
+}
+.spec:hover {
+  color: green;
+}
+
+main {
+  margin-top: 20px;
+  height: 90vh;
+}
+input {
+  padding: 10px 0px;
+  max-width: 250px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin: 5px;
+  background-color: rgb(20, 38, 58);
+  color: whitesmoke;
+}
+
+input:focus {
+  box-shadow: 0px 0px 100vh 100vw rgba(0, 0, 0, 0.5);
+}
+
+input::placeholder {
+  color: yellowgreen;
+}
+
+.friend-box {
+  width: 250px;
+  padding: 10px;
+  margin: 8px;
+  background-color: rgb(20, 38, 58);
+  border-radius: 5px;
+  border: 1px dashed yellowgreen;
+  transition: 0.2s;
+}
+
+.friend-box:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  width: 100vw;
+  background-color: rgb(20, 38, 58);
+  height: 10vh;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  footer {
+    position: absolute;
+    bottom: 0px;
+  }
 }
