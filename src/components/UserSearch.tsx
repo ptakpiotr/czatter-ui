@@ -32,6 +32,10 @@ function UserSearch() {
           alert("Succesfully added friend");
         });
 
+        connection.on("FriendDeleted", () => {
+          alert("User succesfully deleted");
+        });
+
         if (connection.state === HubConnectionState.Connected) {
           connection.invoke("GetMyFriends");
         }
