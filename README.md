@@ -20,7 +20,7 @@ UI Layer for Czatter application made with React & TypeScript. This is my first 
 
 ## Usage
 
-Download this app and API, which you can find on this address: [API](), fill the appsettings.json or any file that is the part of configuration API with proper values.
+Download this app and API, which you can find on this address: [API](https://github.com/ptakpiotr/ReactProjectsAuth), fill the appsettings.json or any file that is the part of configuration API with proper values.
 Screenshots of home UI:
 ![Home1](https://raw.githubusercontent.com/ptakpiotr/czatter-ui/master/home1.png?token=GHSAT0AAAAAABRPSH2AYYNPICVRE3247PE4YQGRFFQ)
 ![Home2](https://raw.githubusercontent.com/ptakpiotr/czatter-ui/master/home2.png?token=GHSAT0AAAAAABRPSH2BRYED5WBOZKZJCIZ2YQGRFIQ)
