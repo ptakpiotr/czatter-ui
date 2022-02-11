@@ -25,4 +25,6 @@ Screenshots of home UI:
 ![Home1](https://raw.githubusercontent.com/ptakpiotr/czatter-ui/master/home1.png?token=GHSAT0AAAAAABRPSH2AYYNPICVRE3247PE4YQGRFFQ)
 ![Home2](https://raw.githubusercontent.com/ptakpiotr/czatter-ui/master/home2.png?token=GHSAT0AAAAAABRPSH2BRYED5WBOZKZJCIZ2YQGRFIQ)
 
+The app contains one "extra" feature - React DnD that is used to copying messages to your message input.
+
 ## Updates
