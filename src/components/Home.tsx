@@ -21,7 +21,7 @@ function Home() {
     };
   }, []);
 
-  if (!isAuth) {
+  if (localStorage.getItem("token") === null) {
     return (
       <main>
         <Row>
@@ -35,7 +35,7 @@ function Home() {
                 src="http://localhost:3000/chat.jpg"
                 alt="Chatting robot"
                 style={{
-                  maxWidth: "400px",
+                  maxWidth: "360px",
                 }}
               />
             </Col>

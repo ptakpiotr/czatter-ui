@@ -25,7 +25,7 @@ function Navbar() {
               <StyledLi>
                 <Link to="/about">About</Link>
               </StyledLi>
-              {isAuth && (
+              {localStorage.getItem("token") != null && (
                 <StyledLi>
                   <Logout />
                 </StyledLi>

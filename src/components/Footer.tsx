@@ -1,7 +1,7 @@
 import React from "react";
 
 function Footer() {
-  return <footer>My footer</footer>;
+  return <footer>&copy; ptakpiotr</footer>;
 }
 
 export default Footer;

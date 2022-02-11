@@ -46,6 +46,7 @@ function UserSearch() {
       })
       .catch((err) => {
         console.error(err);
+        localStorage.clear();
       });
 
     setConn(connection);

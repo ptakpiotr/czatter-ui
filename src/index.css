@@ -43,6 +43,7 @@ input {
 }
 
 input:focus {
+  z-index: 10;
   box-shadow: 0px 0px 100vh 100vw rgba(0, 0, 0, 0.5);
 }
 
@@ -69,10 +70,4 @@ footer {
   background-color: rgb(20, 38, 58);
   height: 10vh;
   text-align: center;
-}
-@media (max-width: 1000px) {
-  footer {
-    position: absolute;
-    bottom: 0px;
-  }
 }

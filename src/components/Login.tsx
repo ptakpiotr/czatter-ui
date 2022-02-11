@@ -9,6 +9,7 @@ function Login() {
   const [password, setPassword] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const { dispatch } = useContext(GlobalContext);
+  const [redirectTo, setRedirectTo] = useState(false);
 
   const handleLoginAsync = (url: string) => {
     axios
@@ -33,6 +34,7 @@ function Login() {
           });
           localStorage.setItem("token", dt.data.token);
           setMessage("Succesfully logged in");
+          setRedirectTo(true);
         }
       })
       .catch((err) => {
@@ -46,6 +48,10 @@ function Login() {
     handleLoginAsync("https://localhost:7222/account/login");
     setEmail("");
     setPassword("");
+  };
+
+  const handleClick = () => {
+    window.location.href = "http://localhost:3000";
   };
 
   return (
@@ -87,6 +93,13 @@ function Login() {
         </Row>
       </form>
       <p>{message}</p>
+      <p>
+        {redirectTo && (
+          <button className="btn btn-primary" onClick={handleClick}>
+            Go!
+          </button>
+        )}
+      </p>
     </>
   );
 }
